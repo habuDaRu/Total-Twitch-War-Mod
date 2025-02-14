@@ -1,4 +1,5 @@
-# simple_local_twitch_bot
+# simple_local_twitch_bot for WH3 Mod
+
 
 Simple local Read-Only Twitch Bot <br />
 
