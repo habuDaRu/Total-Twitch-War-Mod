@@ -1,11 +1,13 @@
 # simple_local_twitch_bot
 
-Simple local Read-Only Twitch Bot
-Run in Main WH3 Dir
+Simple local Read-Only Twitch Bot <br />
 
-Alt mode: suggest, suggest_long
-oauth token (https://twitchtokengenerator.com/) Use Read-Only Scope
+Run in Main WH3 Dir <br />
 
-suggest        Keyword Name
-suggest_long   Keyword Name1 Name2 
-norm           Username
+Alt mode: suggest, suggest_long <br />
+oauth token ( get from: https://twitchtokengenerator.com/ Use Read-Only Scope) <br />
+
+## Mode desc <br />
+suggest        Keyword Name <br />
+suggest_long   Keyword Name1 Name2  <br />
+norm           Username <br />
