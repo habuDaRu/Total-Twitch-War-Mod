@@ -23,6 +23,14 @@ class ReadOnlyBot(commands.Bot):
                     with open("usernames.txt", "a", encoding="utf-8") as f:
                         f.write(f"{name_to_save}\n")
                     print(f"Written suggested name {name_to_save} to usernames.txt")
+            elif self.mode == 'suggest_long':  # Suggest long mode
+                parts = message.content.split()
+                if len(parts) > 1:
+                    # Join all parts after the keyword and limit to 25 characters
+                    long_name = ' '.join(parts[1:])[:25]
+                    with open("usernames.txt", "a", encoding="utf-8") as f:
+                        f.write(f"{long_name}\n")
+                    print(f"Written long suggested name {long_name} to usernames.txt")
             else:  # Normal mode
                 with open("usernames.txt", "a", encoding="utf-8") as f:
                     f.write(f"{message.author.name}\n")
