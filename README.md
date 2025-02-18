@@ -7,7 +7,8 @@ Use the exe if you dont know how to run a python script (Its exactly the same). 
 Run it from Main WH3 Dir <br />
  <br />
 - Will write the names in usernames.txt into the folder it runs from -> Main WH3 folder (..\Steam\steamapps\common\Total War WARHAMMER III) <br />
-- The tdw_twitch_renamer.pck mod will use the usernames.txt to get strings to apply as names  <br />
+- tdw_twitch_renamer.pack needs to be placed in the data folder (..\Steam\steamapps\common\Total War WARHAMMER III\data) <br />
+- The tdw_twitch_renamer.pack mod will use the usernames.txt to get strings to apply as names  <br />
 - Selected Mode defines what is saved as name  <br />
 <br /> <br />
 
