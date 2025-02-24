@@ -25,5 +25,5 @@ suggest_long &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name Name  (for accept
 normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username = Name <br />
 
 
-## Demo Video: https://youtu.be/96r98GOyxtU
-<a href="[http://example.com/](https://youtu.be/96r98GOyxtU)" target="_blank">example</a>
+## Demo Video
+<a href="https://youtu.be/96r98GOyxtU" target="_blank">Link to YouTube</a>
