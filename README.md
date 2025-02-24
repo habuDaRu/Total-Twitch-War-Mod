@@ -22,7 +22,7 @@ oauth token ( get from: https://twitchtokengenerator.com/ Use Read-Only Scope) <
 ## Mode desc <br />
 suggest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name <br />
 suggest_long &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name1 Name2  <br />
-normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username (only)<br />
+normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username (only)<br />
 
 
 Demo Video: https://youtu.be/96r98GOyxtU
