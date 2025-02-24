@@ -18,7 +18,6 @@ Run it (Exe or Script) from the Main WH3 Dir <br />
 
 DONT SHARE YOUR OAUTH TOKEN <br />
  <br /><br />
-Alt mode: suggest, suggest_long <br />
 oauth token (get it from if you dont know how to: https://twitchtokengenerator.com/ Use Read-Only Scope) <br />
 
 ## Mode desc <br />
