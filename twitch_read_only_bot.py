@@ -29,7 +29,7 @@ class ReadOnlyBot(commands.Bot):
                     name_to_save = parts[1][:25]  # Limit the name length to 25
                     with open("tdw_bot_delivered_names.txt", "a", encoding="utf-8") as f:
                         f.write(f"{name_to_save}\n")
-                    print(f"{message.author.name}: {message.content}")
+                    print(f"{message.author.display_name}: {message.content}")
                     print(f"Unit name {GREEN}{name_to_save}{RESET} added to tdw_bot_delivered_names.txt")
             elif self.mode == 'suggest_long':  # Suggest long mode
                 parts = message.content.split()
@@ -38,16 +38,16 @@ class ReadOnlyBot(commands.Bot):
                     long_name = ' '.join(parts[1:])[:25]
                     with open("tdw_bot_delivered_names.txt", "a", encoding="utf-8") as f:
                         f.write(f"{long_name}\n")
-                    print(f"{message.author.name}: {message.content}")
+                    print(f"{message.author.display_name}: {message.content}")
                     print(f"Unit name {GREEN}{name_to_save}{RESET} added to tdw_bot_delivered_names.txt")
             else:  # Normal mode
                 with open("tdw_bot_delivered_names.txt", "a", encoding="utf-8") as f:
-                    f.write(f"{message.author.name}\n")
-                print(f"{message.author.name}: {message.content}")
-                print(f"Unit name {GREEN}{message.author.name}{RESET} added to tdw_bot_delivered_names.txt")
+                    f.write(f"{message.author.display_name}\n")
+                print(f"{message.author.display_name}: {message.content}")
+                print(f"Unit name {GREEN}{message.author.display_name}{RESET} added to tdw_bot_delivered_names.txt")
 
         # Optional: print chat messages (you can remove this line if you don't want it)
-        # print(f"{message.author.name}: {message.content}")
+        # print(f"{message.author.display_name}: {message.content}")
 
 # Ask the user for mode, token, channel name, and keyword
 mode = input("Enter mode - leave empty for normal mode (or 'suggest', 'suggest_long': ").strip() or "normal"
