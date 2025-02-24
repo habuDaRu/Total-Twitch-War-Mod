@@ -4,7 +4,6 @@ Use the exe if you dont know how to run a python script (Its exactly the same). 
 Run it (Exe or Script) from the Main WH3 Dir <br />
  <br />
 SteamLink for the Mod only: -- Following Soon -- <br />
- <br />
 ### Regarding Bot: <br />
 - Will write the names in tdw_bot_delivered_names.txt into the folder it runs from -> Main WH3 folder (..\Steam\steamapps\common\Total War WARHAMMER III) <br />
 - Use tdw_twitch_bot_ignored_users.txt (in the Main Dir) for blocked Users or to exclude Bots <br />
