@@ -16,7 +16,7 @@ Run it (Exe or Script) from the Main WH3 Dir <br />
 - Add names to tdw_twitch_spec_frames_names.txt to allow semi-random Frame selection for the named Unit in the unit Panel <br />
 <br /> <br />
 
-DONT SHARE YOUR OAUTH TOKEN <br />
+### DONT SHARE YOUR OAUTH TOKEN <br />
 get oauth token from (if you dont know how to): https://twitchtokengenerator.com/ Use Read-Only Scope <br /> <br />
 
 ## Mode desc <br />
