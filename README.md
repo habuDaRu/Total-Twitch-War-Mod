@@ -18,7 +18,7 @@ Run it (Exe or Script) from the Main WH3 Dir <br />
 
 DONT SHARE YOUR OAUTH TOKEN <br />
  <br />
-oauth token (get it from if you dont know how to: https://twitchtokengenerator.com/ Use Read-Only Scope) <br /> <br />
+ get oauth token from (if you dont know how to): https://twitchtokengenerator.com/ Use Read-Only Scope <br /> <br />
 
 ## Mode desc <br />
 suggest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name <br />
