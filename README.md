@@ -38,4 +38,8 @@ normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 
 ## Peepo o7 Emotes
 <a href="https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ" target="_blank">Link to 7tv</a>
-- 2 default o7 emotes (o7
+- 3 default
+- 2 Empire
+- 3 kislev
+- 2 Cathay
+- 2 Greenskins
