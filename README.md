@@ -28,3 +28,6 @@ normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 
 ## Demo Video:  <br />
 <a href="https://youtu.be/Nxhe_9w6_LE" target="_blank">Link to YouTube</a>
+
+## Peepo o7 Emotes
+<a href="https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ" target="_blank">Link to 7tv</a>
