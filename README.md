@@ -15,7 +15,7 @@ SteamLink (for the Mod only): <a href="https://steamcommunity.com/sharedfiles/fi
 - tdw_twitch_renamer.pack requires the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
 - The tdw_twitch_renamer.pack mod will use the tdw_bot_delivered_names.txt to get strings to apply as names  <br />
 - Add names to tdw_twitch_spec_frames_names.txt to allow semi-random Frame selection for the named Unit in the unit Panel <br />
-- It is the same file which is available on the Steam Workshop <br />
+- It is the same file which is available on the Steam Workshop - so better use steam because of autoupdate <br />
 <br /> <br />
 
 #### File-Setup for other Bots: <br />
