@@ -19,9 +19,17 @@ SteamLink (for the Mod only): <a href="https://steamcommunity.com/sharedfiles/fi
 <br /> <br />
 
 #### File-Setup for other Bots: <br />
+##### Streamer.bot:
+ - Action: define a keyword
+ - Trigger: Command Triggered
+ - Sub-Actions:
+     - File Tail: Enabled,
+     - Write to file(tdw_bot_delivered_names.txt) - make sure set the txt file into the Main Wh3 Folder (..\Steam\steamapps\common\Total War WARHAMMER III\data)
+     - Optional: Setup a Twitch Message as automatic Response
+
 tdw_bot_delivered_names.txt & tdw_twitch_spec_frames_names.txt: 
 - each line a name
-- the mod does some sanity checks: length (max 25 letters - Game limitation), filter out double entries
+- the ingame mod does some sanity checks: length (max 25 letters - Game limitation), filter out double entries
 - both txt Files need to be in the main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III)
 
 ### DONT SHARE YOUR OAUTH TOKEN <br />
