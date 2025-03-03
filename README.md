@@ -50,4 +50,4 @@ normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 - 2 Empire
 - 3 kislev
 - 2 Cathay
-- 2 Greenskins
+- 3 Greenskins
