@@ -34,6 +34,7 @@
 ### b) Simple local Read-Only Twitch Bot available here *(twitch_read_only_bot.exe or twitch_read_only_bot.py)* <br />
 - Use the exe if you dont know how to run a python script (Its exactly the same). <br />
 - Run it (Exe or Script) from the Main WH3 Dir <br />
+- suggested to use a dedicated bot <br />
  <br />
  
 - Will write the names in tdw_bot_delivered_names.txt into the folder it runs from -> Main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III) <br />
