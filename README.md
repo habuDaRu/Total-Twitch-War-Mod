@@ -22,7 +22,7 @@
   - both txt Files need to be in the main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III)
 <br />
 
-### a) Streamer.bot:
+### a) <a href="https://streamer.bot/" target="_blank">Streamer.bot</a>:
  - Action: define a keyword
  - Trigger: Command Triggered
  - Sub-Actions:
