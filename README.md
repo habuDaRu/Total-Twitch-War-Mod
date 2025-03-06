@@ -27,7 +27,7 @@ Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=
 <br />
 <br />
 
-### b) Simple local Read-Only Twitch Bot for WH3 Mod *(twitch_read_only_bot.exe or twitch_read_only_bot.py)* <br />
+### b) Simple local Read-Only Twitch Bot available here *(twitch_read_only_bot.exe or twitch_read_only_bot.py)* <br />
 Use the exe if you dont know how to run a python script (Its exactly the same). <br />
 Run it (Exe or Script) from the Main WH3 Dir <br />
  <br />
