@@ -5,7 +5,10 @@ Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=
 ### **Mod** *(tdw_twitch_auto_rename_units.pack & tdw_twitch_auto_rename_units.png)*: <br />
 - 	**requires** the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
 - both files needs to be placed in the data folder (..\Steam\steamapps\common\Total War WARHAMMER III\data) <br />
-- The Mod will read out names from the tdw_bot_delivered_names.txt to apply as names to the units ingame <br />
+- The Mod will read out names from the tdw_bot_delivered_names.txt to apply as names to the units ingame (until no more names or units are available) <br />
+- tracks kill and battle stats (automatically) <br />
+- adds a panel with the Top 3 renamed units with most kills/battles + 3 randomly selected chat units <br />
+- check for killed/disbanded units and also manages a panel with all lost units (including the kills, battles and death-turn for the units) <br />
 - Add names to tdw_twitch_spec_frames_names.txt to allow semi-random Frame selection for the named Unit in the unit Panel <br />
 <br /> <br />
 
