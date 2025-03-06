@@ -47,7 +47,9 @@ normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 ## Peepo o7 Emotes
 <a href="https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ" target="_blank">Link to 7tv</a>
 - 3 default
-- 2 Empire
+- 3 Empire
 - 3 kislev
 - 2 Cathay
 - 3 Greenskins
+- 2 Dark Elf
+- 1 Tombkings
