@@ -23,10 +23,10 @@ Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=
    - Write to file(tdw_bot_delivered_names.txt) - make sure set the txt file into the Main Wh3 Folder (..\Steam\steamapps\common\Total War WARHAMMER III\data)
    - Optional: Setup a Twitch Message as automatic Response
 
-- File Setup for: tdw_bot_delivered_names.txt and tdw_twitch_spec_frames_names.txt: 
-- each line a name
-- the ingame mod does some sanity checks: length (max 25 letters - Game limitation), filter out double entries
-- both txt Files need to be in the main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III)
+- File Setup for: tdw_bot_delivered_names.txt and tdw_twitch_spec_frames_names.txt:
+  - each line a name
+  - the ingame mod does some sanity checks: length (max 25 letters - Game limitation), filter out double entries
+  - both txt Files need to be in the main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III)
 <br />
 <br />
 
