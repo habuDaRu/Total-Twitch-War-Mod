@@ -19,9 +19,9 @@ Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=
  - Action: define a keyword
  - Trigger: Command Triggered
  - Sub-Actions:
-     - File Tail: Enabled,
-     - Write to file(tdw_bot_delivered_names.txt) - make sure set the txt file into the Main Wh3 Folder (..\Steam\steamapps\common\Total War WARHAMMER III\data)
-     - Optional: Setup a Twitch Message as automatic Response
+   - File Tail: Enabled,
+   - Write to file(tdw_bot_delivered_names.txt) - make sure set the txt file into the Main Wh3 Folder (..\Steam\steamapps\common\Total War WARHAMMER III\data)
+   - Optional: Setup a Twitch Message as automatic Response
 
 - File Setup for: tdw_bot_delivered_names.txt and tdw_twitch_spec_frames_names.txt: 
 - each line a name
