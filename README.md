@@ -1,7 +1,7 @@
 # 1. **Twitch Auto Rename Units Mod** <br />
-Mod to automatically rename Units (Units only - no Lords and Heroes) after people from Twitch-chats. <br />
-Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3439206700" target="_blank">Link to Steam Workshop Page</a> <br />
-- It is the same file which is available here - so better use steam because of autoupdate <br /><br />
+- Mod to automatically rename Units (Units only - no Lords and Heroes) after people from Twitch-chats. <br />
+- Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3439206700" target="_blank">Link to Steam Workshop Page</a> <br />
+  - It is the same file which is available here - so better use steam because of autoupdate <br /><br />
 ### **Mod** *(tdw_twitch_auto_rename_units.pack & tdw_twitch_auto_rename_units.png)*: <br />
 - 	**requires** the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
 - both files needs to be placed in the data folder (..\Steam\steamapps\common\Total War WARHAMMER III\data) <br />
