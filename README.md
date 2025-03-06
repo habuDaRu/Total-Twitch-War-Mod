@@ -1,25 +1,19 @@
-# Simple local Read-Only Twitch Bot for WH3 Mod <br />
+# 1. **Twitch Auto Rename Units Mod**
 
-Use the exe if you dont know how to run a python script (Its exactly the same). <br />
-Run it (Exe or Script) from the Main WH3 Dir <br />
- <br />
 SteamLink (for the Mod only): <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3433854519&result=1" target="_blank">Link to Steam Workshop</a>  <br />
-### Regarding Bot: <br />
-- Will write the names in tdw_bot_delivered_names.txt into the folder it runs from -> Main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III) <br />
-- Use tdw_twitch_bot_ignored_users.txt (in the Main WH3 dir) for blocked Users or to exclude Bots <br />
-- Use tdw_twitch_bot_blocked_words.txt (in the Main WH3 dir) to block words <br /> 
-- Selected Mode defines what is saved as name  <br /> <br />
-
-### Regarding Mod: <br />
-- tdw_twitch_renamer.pack needs to be placed in the data folder (..\Steam\steamapps\common\Total War WARHAMMER III\data) <br />
-- tdw_twitch_renamer.pack requires the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
-- The tdw_twitch_renamer.pack mod will use the tdw_bot_delivered_names.txt to get strings to apply as names  <br />
+- It is the same file which is available on the Steam Workshop - so better use steam because of autoupdate <br /><br />
+### **Mod** *(tdw_twitch_auto_rename_units.pack & tdw_twitch_auto_rename_units.png)*: <br />
+- 	**requires** the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
+- both files needs to be placed in the data folder (..\Steam\steamapps\common\Total War WARHAMMER III\data) <br />
+ <br />
+- The tdw_twitch_renamer.pack mod will read out names from the tdw_bot_delivered_names.txt to apply as names to the units ingame <br />
 - Add names to tdw_twitch_spec_frames_names.txt to allow semi-random Frame selection for the named Unit in the unit Panel <br />
-- It is the same file which is available on the Steam Workshop - so better use steam because of autoupdate <br />
 <br /> <br />
 
-#### File-Setup for other Bots: <br />
-##### Streamer.bot:
+
+
+# 2. Setup for Chat Bot: <br />
+### a) Streamer.bot:
  - Action: define a keyword
  - Trigger: Command Triggered
  - Sub-Actions:
@@ -27,24 +21,35 @@ SteamLink (for the Mod only): <a href="https://steamcommunity.com/sharedfiles/fi
      - Write to file(tdw_bot_delivered_names.txt) - make sure set the txt file into the Main Wh3 Folder (..\Steam\steamapps\common\Total War WARHAMMER III\data)
      - Optional: Setup a Twitch Message as automatic Response
 
-tdw_bot_delivered_names.txt & tdw_twitch_spec_frames_names.txt: 
+- File Setup for: tdw_bot_delivered_names.txt and tdw_twitch_spec_frames_names.txt: 
 - each line a name
 - the ingame mod does some sanity checks: length (max 25 letters - Game limitation), filter out double entries
 - both txt Files need to be in the main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III)
+<br />
+<br />
 
-### DONT SHARE YOUR OAUTH TOKEN <br />
+### b) Simple local Read-Only Twitch Bot for WH3 Mod *(twitch_read_only_bot.exe or twitch_read_only_bot.py)* <br />
+Use the exe if you dont know how to run a python script (Its exactly the same). <br />
+Run it (Exe or Script) from the Main WH3 Dir <br />
+ <br />
+- Will write the names in tdw_bot_delivered_names.txt into the folder it runs from -> Main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III) <br />
+- Use tdw_twitch_bot_ignored_users.txt (in the Main WH3 dir) for blocked Users or to exclude Bots <br />
+- Use tdw_twitch_bot_blocked_words.txt (in the Main WH3 dir) to block words <br /> 
+- Selected Mode defines what is saved as name  <br /> <br />
+
+#### DONT SHARE YOUR OAUTH TOKEN <br />
 get oauth token from (if you dont know how to): https://twitchtokengenerator.com/ Use Read-Only Scope <br /> <br />
 
-## Mode desc <br />
+#### Mode desc <br />
 suggest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name <br />
 suggest_long &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name Name  (for accepting spaces in the names) <br />
 normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username = Name <br />
 
 
-## Demo Video:  <br />
+## 3. Demo Video:  <br />
 <a href="https://youtu.be/Nxhe_9w6_LE" target="_blank">Link to YouTube</a>
 
-## Peepo o7 Emotes
+## 4. Peepo o7 Emotes on 7tv
 <a href="https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ" target="_blank">Link to 7tv</a>
 - 3 default
 - 3 Empire
