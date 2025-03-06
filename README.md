@@ -1,6 +1,6 @@
 # 1. **Twitch Auto Rename Units Mod**
 
-Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3433854519&result=1" target="_blank">Link to Steam Workshop Page</a>  <br />
+Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3439206700" target="_blank">Link to Steam Workshop Page</a>  <br />
 - It is the same file which is available here - so better use steam because of autoupdate <br /><br />
 ### **Mod** *(tdw_twitch_auto_rename_units.pack & tdw_twitch_auto_rename_units.png)*: <br />
 - 	**requires** the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
