@@ -331,7 +331,7 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
 
 --- 
 
-### Extensive Logging
+### Detailed Logging
 - all Logs can be found in 
        `..\Steam\steamapps\common\Total War WARHAMMER III\`
 </br>
