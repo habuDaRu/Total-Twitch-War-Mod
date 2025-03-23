@@ -46,7 +46,7 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
      > _Important_: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries). The mod doesn’t handle this, so it's up to the streamer to ensure the names are appropriate.
 
    - **`tdw_twitch_points_punishment.txt`**  
-     This file retrieves commands from the chat, which can be triggered by chat commands, the Twitch channel points system, or other alerts tracked by the bot. The commands in this file are processed by the mod to trigger specific actions (see Available Commands and Their Effects).
+     This file retrieves the commands from the chat, which can be triggered by chat commands, the Twitch channel points system, or other alerts tracked by the bot. The commands in this file are processed by the mod to trigger specific actions (see Available Commands and Their Effects).
 
      **Example file content**:
      ```
