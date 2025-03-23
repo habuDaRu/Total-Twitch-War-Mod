@@ -1,18 +1,34 @@
 # Total Twitch War Mod – A Twitch Chat Integration Mod
 
+**This mod is designed for streamers.** It requires a bot to function.   
+Without a bot providing input from Twitch chat, the mod cannot perform its actions.
+
 ---
 
 Content: 
 - [Features](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#features)   
 - [Requirements](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#requirements)   
 - [Setup for Chat bot](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#setup-for-chat-bot)   
+    - [Required Files]()   
+    - [Opptinal Files]()   
 - [Commands and Queue System](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#commands-and-queue-system)   
-- [Queue handling and prioritization](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#queue-handling-and-prioritization)   
+  - [Available Commands and their Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#available-commands-and-their-effects)
+    - [War Declaration](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#war-declaration)   
+    - [Public Order Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#public-order-effects)   
+    - [Replensihment Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#replenishment-effects)   
+    - [Combat Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#combat-effects)   
+    - [Money](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#money)   
+    - [Army Spawner](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#army-spawner)   
+    - [peak through Fog of war](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#peak-through-fog-of-war)   
+    - [Switch cities around](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#switch-cities-around)
+  - [Queue handling and prioritization](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#queue-handling-and-prioritization)   
+- [Detailed Logging](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#detailed-logging)   
+- [Example Setup for streamer.bot](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#example-setup-for-streamerbot)   
+- [Additional links](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#additional-links)
+  - [o7 Peepo emotes](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#o7-peepo-emotes)   
 
 ---
 
-**This mod is designed for streamers.** It requires a bot to function.   
-Without a bot providing input from Twitch chat, the mod cannot perform its actions.
 
 ## Features
 
@@ -34,7 +50,7 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
 
 ## Setup for Chat Bot
 
-1. **Required Files**:
+### 1. **Required Files**:
 
    - **`tdw_bot_delivered_names.txt`**  
      The bot must write names from Twitch chat into this file for the automatic renaming system of the mod to function.
@@ -78,7 +94,7 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
      ```
 
 
-2. **Optional Files**:
+### 2. **Optional Files**:
 
    - **`tdw_twitch_spec_frames_names.txt`**  
      This file is **not required** but If used, it adds special faction-specific frames to certain users’ units in the panel.
@@ -117,7 +133,7 @@ The commands trigger various in-game effects, and the mod attempts to execute th
 
 ---
 
-#### **Diplomacy**
+#### **War Declaration**
 
 - **`random_war_declaration`**  
   Declares a random faction war, targeting non-vassal, alive factions that are not already at war with the player, not allied with the player, and have no non-aggression pact with the player.
@@ -198,7 +214,7 @@ name1: repl_boni_effect_all
 
 ---
 
-#### **Combat Stats Effects in Provinces**
+#### **Combat Effects**
 
 - **`damage_melee_boni_effect_province`**  
   Increases melee damage for units in a province with randomized strength and cooldown for each province.
@@ -237,7 +253,7 @@ This gives the player 10,000 money.
 
 ---
 
-#### **Enemy Armies**
+#### **Army Spawner**
 
 - **`spawn_armies_xxx_yy`**  
   Spawns `yy` enemy armies for a faction `xxx`, which is hostile towards the player.   
@@ -288,7 +304,7 @@ This will spawn 3 armies for a Kislev faction which is hostile towards the playe
 
 ---
 
-#### **Lift Fog of War**
+#### **Peak Through Fog of War**
 
 - **`peak_10`, `peak_5`, `peak_2`, `peak_1`**  
   Lifts the fog of war by revealing a random number of regions.  
