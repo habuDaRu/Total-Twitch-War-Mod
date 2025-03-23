@@ -14,6 +14,7 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
 - **Queue System for Commands**: Commands from Twitch chat are handled in queue system.
 - **Customizable Commands**: Some commands can be customized by the input variables through naming command convention.
 - **Advanced Command Handling**: Streamers can configure their bot to decide which commands are active.
+- **Detailed Logging**: Additional information available through logging of the processes (for potential Errorhandling) and to set up confirmation messages by bot back to the Twitch chat
 
 ## Requirements
 
