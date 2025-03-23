@@ -338,7 +338,7 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
    - Ensure the file is saved in the correct Warhammer III directory.
    - Optionally, send a Twitch chat response confirming the rename.
 
-For a visual guide, see: [Imgur setup example](https://imgur.com)
+For a visual guide, see: [Imgur setup example](https://imgur.com/a/VQZyLqZ)
 
 ## Additional Links
 ### o7 Peepo Emotes
