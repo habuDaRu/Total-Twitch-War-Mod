@@ -10,9 +10,9 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
 - **Lost Units List**: Tracks units that are killed or disbanded, including their battle stats and turn of death.
 - **Optional Graphical Feature**: Randomly assigns special faction frames to units of specific users (e.g., VIPs, mods, subs, or any designated users).
 - **Script-Based Compatibility**: Safe to add or remove mid-campaign; names will not revert upon removal.
-- **Queue System for Commands**: Commands from Twitch chat are placed in a priority or normal queue based on the user’s status. The mod processes them at the start of each round, retrying unsuccessful commands.
-- **Customizable Commands**: Streamers can configure commands such as random faction wars, corruption effects, public order effects, replenishment effects, and much more.
-- **Advanced Command Handling**: Handles commands like army spawning, fog of war lifting, and city switching.
+- **Queue System for Commands**: Commands from Twitch chat are handled in queue system.
+- **Customizable Commands**: Some commands can be customized by the input variables through naming command convention.
+- **Advanced Command Handling**: Streamers can configure their bot to decide which commands are active.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
 1. **Required Files**:
 
    - **`tdw_bot_delivered_names.txt`**  
-     The bot must write names from Twitch chat into this file for the mod to function.
+     The bot must write names from Twitch chat into this file for the automatic renaming system of the mod to function.
 
      **File Rules**:
      - Each name must be on a separate line.
@@ -46,7 +46,7 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
      > _Important_: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries). The mod doesn’t handle this, so it's up to the streamer to ensure the names are appropriate.
 
    - **`tdw_twitch_points_punishment.txt`**  
-     This file retrieves the commands from the chat, which can be triggered by chat commands, the Twitch channel points system, or other alerts tracked by the bot. The commands in this file are processed by the mod to trigger specific actions (see Available Commands and Their Effects).
+     The bot must write names and commands retrieved from Twitch chat into this file for the command handling system of the mod to function. Commands can be triggered in various ways like chat commands, the Twitch channel points system, or other alerts tracked by the bot. For an overview of available commands see 'Available Commands and Their Effects'-section.
 
      **Example file content**:
      ```
@@ -57,8 +57,20 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
 
 2. **Optional Files**:
 
+   - **`tdw_twitch_spec_frames_names.txt`**  
+     This file is **not required** but If used, it adds special faction-specific frames to certain users’ units in the panel.
+      - Randomly assigns frames to users listed in tdw_twitch_spec_frames_names.txt.
+      - can be used for VIPs, mods, subs, or any designated users.
+
+     **Example file content**:
+     ```
+     name1
+     name2
+     ```
+
    - **`tdw_priority_users.txt`**  
-     If used, this file contains the names of users whose triggered commands will always be placed in the priority queue.
+     This file is **not required** but If used, it contains the names of users whose triggered commands will always be placed in the priority queue.
+      - can be used for VIPs, mods, subs, or any designated users.
 
      **Example file content**:
      ```
@@ -66,18 +78,6 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
      name2
      name3
      ```
-
-   - **`tdw_twitch_spec_frames_names.txt`**  
-     This file is not required but adds special faction-specific frames to certain users’ units in the panel.
-      - Randomly assigns frames to users listed in tdw_twitch_spec_frames_names.txt.
-      - Useful for VIPs, mods, subs, or any designated users.
-
-     **Example file content**:
-     ```
-     name1
-     name2
-     ```
-
 
 ## Commands and Queue System
 
