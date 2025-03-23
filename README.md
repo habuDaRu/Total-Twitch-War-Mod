@@ -323,7 +323,7 @@ For a visual guide, see: [Imgur setup example](https://imgur.com)
 ## Additional Links
 ### o7 Peepo Emotes
 
-- Peepo o7 Emotes available on 7TV: [Click here]([https://7tv.app](https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ))
+- Peepo o7 Emotes available on 7TV: [Click here](https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ)
   - **Default Emotes**: 3
   - **Empire Emotes**: 4
   - **Kislev Emotes**: 3
