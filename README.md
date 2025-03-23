@@ -15,7 +15,7 @@ Content:
   - [Available Commands and their Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#available-commands-and-their-effects)
     - [War Declaration](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#war-declaration)   
     - [Public Order Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#public-order-effects)   
-    - [Replensihment Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#replenishment-effects)   
+    - [Replenishment Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#replenishment-effects)   
     - [Combat Effects](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#combat-effects)   
     - [Money](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#money)   
     - [Army Spawner](https://github.com/habuDaRu/Total-Twitch-War-Mod/tree/main#army-spawner)   
