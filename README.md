@@ -1,66 +1,319 @@
-# 1. **Twitch Auto Rename Units Mod** <br />
-- Mod to automatically rename Units (Units only - no Lords and Heroes) after people from Twitch-chats. <br />
-- Steam Workshop: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3439206700" target="_blank">Link to Steam Workshop Page</a> <br />
-  - It is the same file which is available here - so better use steam because of autoupdate <br /><br />
-### **Mod** *(tdw_twitch_auto_rename_units.pack & tdw_twitch_auto_rename_units.png)*: <br />
-- 	**requires** the Mod Configuration Tool (or MCT) - available on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2927955021
-- both files needs to be placed in the data folder (..\Steam\steamapps\common\Total War WARHAMMER III\data) <br />
-- The Mod will read out names from the tdw_bot_delivered_names.txt to apply as names to the units ingame (until no more names or units are available) <br />
-- tracks kill and battle stats (automatically) <br />
-- adds a panel with the Top 3 renamed units with most kills/battles + 3 randomly selected chat units <br />
-- check for killed/disbanded units and also manages a panel with all lost units (including the kills, battles and death-turn for the units) <br />
-- Add names to tdw_twitch_spec_frames_names.txt to allow semi-random Frame selection for the named Unit in the unit Panel <br />
-<br /> <br />
+# Total Twitch War Mod – A Twitch Chat Integration Mod
 
+This mod is designed for streamers. It requires a bot to function. Without a bot providing input from Twitch chat, the mod cannot perform its actions.
 
-# 2. Setup for Chat Bot: <br />
-<br />
+## Features
 
-- File Setup for: tdw_bot_delivered_names.txt and tdw_twitch_spec_frames_names.txt:
-  - each line a name
-  - the ingame mod does some sanity checks: length (max 25 letters - Game limitation), filter out double entries
-  - both txt Files need to be in the main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III)
-<br />
+- **Automatic Unit Renaming**: Assigns Twitch chat-submitted names to in-game units.
+- **Kill & Battle Tracking**: Automatically keeps track of renamed units' stats.
+- **Top Units Panel**: Displays the top 3 units with the most kills/battles, plus 3 random viewer-named units.
+- **Lost Units List**: Tracks units that are killed or disbanded, including their battle stats and turn of death.
+- **Optional Graphical Feature**: Randomly assigns special faction frames to units of specific users (e.g., VIPs, mods, subs, or any designated users).
+- **Script-Based Compatibility**: Safe to add or remove mid-campaign; names will not revert upon removal.
+- **Queue System for Commands**: Commands from Twitch chat are placed in a priority or normal queue based on the user’s status. The mod processes them at the start of each round, retrying unsuccessful commands.
+- **Customizable Commands**: Streamers can configure commands such as random faction wars, corruption effects, public order effects, replenishment effects, and much more.
+- **Advanced Command Handling**: Handles commands like army spawning, fog of war lifting, and city switching.
 
-### a) <a href="https://streamer.bot/" target="_blank">Streamer.bot</a>:
- - Action: define a keyword
- - Trigger: Command Triggered
- - Sub-Actions:
-   - File Tail: Enabled,
-   - Write to file(tdw_bot_delivered_names.txt) - make sure set the txt file into the Main Wh3 Folder (..\Steam\steamapps\common\Total War WARHAMMER III\data)
-   - Optional: Setup a Twitch Message as automatic Response
-<br />
+## Requirements
 
-### b) Simple local Read-Only Twitch Bot available here *(twitch_read_only_bot.exe or twitch_read_only_bot.py)* <br />
-- Use the exe if you dont know how to run a python script (Its exactly the same). <br />
-- Run it (Exe or Script) from the Main WH3 Dir <br />
-- suggested to use a dedicated bot <br />
- <br />
- 
-- Will write the names in tdw_bot_delivered_names.txt into the folder it runs from -> Main Warhammer 3 folder (..\Steam\steamapps\common\Total War WARHAMMER III) <br />
-- Use tdw_twitch_bot_ignored_users.txt (in the Main WH3 dir) for blocked Users or to exclude Bots <br />
-- Use tdw_twitch_bot_blocked_words.txt (in the Main WH3 dir) to block words <br /> 
-- Selected Mode defines what is saved as name  <br />
-<br />
+- **Mod Configuration Tool (MCT)**
+- **A Chat Bot (configured to write names to a text file)**
 
-#### DONT SHARE YOUR OAUTH TOKEN <br />
-get oauth token from (if you dont know how to): https://twitchtokengenerator.com/ Use Read-Only Scope <br /> <br />
+## Setup for Chat Bot
 
-#### Mode description: <br />
-suggest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name <br />
-suggest_long &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword Name Name  (for accepting spaces in the names) <br />
-normal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username = Name <br />
+1. **Required Files:**
+   - `tdw_bot_delivered_names.txt`: The bot must write names from Twitch chat into this file for the mod to function.
+   - `tdw_twitch_points_punishment.txt`: The bot retrieves commands in the format `username: command` (e.g., `name1: nur_corruption_effect_all`).
+   - `tdw_priority_users.txt`: A list of users who should be prioritized in the queue.
+   - `tdw_twitch_points_handled.txt`: Stores handled commands and their results.
 
-<br /> <br />
-# 3. Demo Video:  <br />
-<a href="https://youtu.be/Nxhe_9w6_LE" target="_blank">Link to YouTube</a>
-<br /> <br />
-# 4. Peepo o7 Emotes on 7tv
-<a href="https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ" target="_blank">Link to 7tv</a>
-- 3 default
-- 3 Empire
-- 3 kislev
-- 2 Cathay
-- 3 Greenskins
-- 2 Dark Elf
-- 1 Tombkings
+   **File Rules:**
+   - Each name and command must be on a separate line in `tdw_bot_delivered_names.txt`.
+   - The mod automatically handles:
+     - Maximum name length: 25 characters (game limitation).
+     - Duplicate names are automatically filtered.
+   - Commands are retrieved from `tdw_twitch_points_punishment.txt` in the format:
+     ```
+     name1: nur_corruption_effect_all
+     name2: kho_corruption_effect_all
+     ```
+   - The queue priority is determined by the list in `tdw_priority_users.txt`, with one name per line.
+   
+   **Place the files in the following directory:**
+   `..\Steam\steamapps\common\Total War WARHAMMER III\`
+
+   Example content of `tdw_bot_delivered_names.txt`:
+   ```txt
+   name1
+   name2
+   name3
+   ```
+
+   Example content of `tdw_twitch_points_punishment.txt`:
+   ```txt
+   name1: nur_corruption_effect_all
+   name2: kho_corruption_effect_all
+   ```
+
+   Example content of `tdw_priority_users.txt`:
+   ```txt
+   name1
+   name2
+   ```
+
+   **Note**: Configuring your bot to filter duplicates or limit name length is optional. However, if you set up the bot to do this, it will help reduce the computing load for the game.  
+   **Important**: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries). The mod doesn’t handle this, so it's up to the streamer to ensure the names are appropriate.
+
+2. **Optional File**: `tdw_twitch_spec_frames_names.txt`  
+   This file is not required but adds special faction-specific frames to certain users’ units in the panel.
+
+   - Randomly assigns frames to users listed in `tdw_twitch_spec_frames_names.txt`.
+   - Useful for VIPs, mods, subs, or any designated users.
+
+## Commands and Queue System
+
+The mod processes commands submitted by Twitch viewers through a chat bot, which are added to a priority or normal queue. These commands trigger various in-game events, and the mod attempts to execute them at the start of each round. If a command is successful, it is logged in the `tdw_twitch_points_handled.txt` file; otherwise, it remains in the queue for the next round.
+
+### Available Commands and Their Effects
+
+---
+
+#### **Diplomacy**
+
+- **`random_war_declaration`**  
+  Declares a random faction war, targeting non-vassal, alive factions that are not already at war with the player, not allied with the player, and have no non-aggression pact with the player.
+
+**Example Usage**:  
+```txt
+name1: random_war_declaration
+```
+
+---
+
+#### **Corruption Effects**
+
+- **`random_corruption_effect_all`**  
+  Applies a random corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`nur_corruption_effect_all`**  
+  Applies Nurgle’s corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`kho_corruption_effect_all`**  
+  Applies Khorne’s corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`sla_corruption_effect_all`**  
+  Applies Slaanesh’s corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`tze_corruption_effect_all`**  
+  Applies Tzeentch’s corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`skv_corruption_effect_all`**  
+  Applies Skaven’s corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`chs_corruption_effect_all`**  
+  Applies Chaos corruption effect to all provinces with randomized strength and duration for each province.
+
+- **`vmp_corruption_effect_all`**  
+  Applies Vampire corruption effect to all provinces with randomized strength and duration for each province.
+
+> **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
+
+**Example Usage**:  
+```txt
+name1: nur_corruption_effect_all
+```
+
+---
+
+#### **Public Order Effects**
+
+- **`po_boni_effect_all`**  
+  Increases public order (happiness) in all provinces with randomized strength and duration for each province.
+
+- **`po_mali_effect_all`**  
+  Decreases public order (happiness) in all provinces with randomized strength and duration for each province.
+
+> **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
+
+**Example Usage**:  
+```txt
+name1: po_boni_effect_all
+```
+
+---
+
+#### **Replenishment Effects**
+
+- **`repl_boni_effect_all`**  
+  Increases army replenishment rate for all provinces with randomized strength and duration for each province.
+
+- **`repl_mali_effect_all`**  
+  Decreases army replenishment rate for all provinces with randomized strength and duration for each province.
+
+> **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
+
+**Example Usage**:  
+```txt
+name1: repl_boni_effect_all
+```
+
+---
+
+#### **Combat Stats Effects in Provinces**
+
+- **`damage_melee_boni_effect_province`**  
+  Increases melee damage for units in a province with randomized strength and cooldown for each province.
+
+- **`damage_ranged_boni_effect_province`**  
+  Increases ranged damage for units in a province with randomized strength and cooldown for each province.
+
+- **`armor_boni_effect_province`**  
+  Increases armor for units in a province with randomized strength and cooldown for each province.
+
+- **`melee_defence_boni_effect_province`**  
+  Increases melee defense for units in a province with randomized strength and cooldown for each province.
+
+- **`movement_range_boni_effect_province`**  
+  Increases movement range for units in a province with randomized strength and cooldown for each province.
+
+> **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
+
+**Example Usage**:  
+```txt
+name1: damage_melee_boni_effect_province
+```
+
+---
+
+#### **Money**
+
+- **`toss_a_coin_xx`**  
+  Gives the player `xx * 1000` money (where `xx` is the amount).  
+
+**Example Usage**:  
+```txt
+name1: toss_a_coin_10
+```
+This gives the player 10,000 money.
+
+---
+
+#### **Enemy Armies**
+
+- **`spawn_armies_xxx_yy`**  
+  Spawns `yy` enemy armies for a faction `xxx`, which is hostile towards the player. These armies will have randomized faction-specific units and randomized army sizes.  
+  - `yy` defines the number of armies spawned.  
+  - `xxx` can include specific factions or group options:
+    - **Specific Factions:**
+      - `grn` (Greenskins)
+      - `ogr` (Ogres)
+      - `bst` (Beastmen)
+      - `nor` (Norsca)
+      - `skv` (Skaven)
+      - `def` (Dwarfs)
+      - `chs` (Chaos)
+      - `chd` (Chaos Dwarfs)
+      - `brt` (Bretonnia)
+      - `cth` (Cathay)
+      - `wef` (Wood Elves)
+      - `lzd` (Lizardmen)
+      - `hef` (High Elves)
+      - `ksl` (Kislev)
+      - `dwf` (Dwarfs)
+      - `emp` (Empire)
+      - `nur` (Nurgle)
+      - `kho` (Khorne)
+      - `sla` (Slaanesh)
+      - `tze` (Tzeentch)
+      - `vmp` (Vampire Coast)
+      - `cst` (Tomb Kings)
+      - `tmb` (Tomb Kings)
+    - **Group Options:**
+      - `dem = demons`
+      - `ded = Undead`
+      - `god = Good factions`
+      - `bad = Bad factions`
+      - `hmn = Human factions`
+      - `elf = Elf factions`
+      - `neu = Neutral factions (Greenskins, Ogres)`
+      - `any = All factions`
+
+> **Note:** If the specified faction is unavailable, the mod will use rebels as a fallback.
+
+**Example Usage**:  
+```txt
+name1: spawn_armies_ksl_3
+```
+This will spawn 3 armies for a Kislev faction which is hostile towards the player.
+
+---
+
+#### **Lift Fog of War**
+
+- **`peak_10`, `peak_5`, `peak_2`, `peak_1`**  
+  Lifts the fog of war by revealing a random number of regions.  
+  - The number represents the early cancel chance (cumulative) for each region. These chances build up over time to 100% (sure cancel).
+  - Resulting in a maximum of 10, 20, 50, 100 provinces revealed for the player.
+  - The revealed AI Faction will act according the normal Total War Logic towards being revealed
+
+**Example Usage**:  
+```txt
+name1: peak_10
+```
+This will lift the fog of war for up to 10 regions with a chance to cancel the process earlier with 10% per allready revealed region.
+
+---
+
+#### **Switch Cities Around**
+
+- **`switcharoo_XX`**  
+  Switches cities for a total of `XX` random alive factions. In each iteration, one of the factions gets a city, while the following factions receive one of their cities.  
+  As initual city to reassign an empty city is used somewhere on the map.
+
+- **`switcharoo_XX_ai`**  
+  Similar to `switcharoo_XX`, but only AI factions are affected. The player is excluded from this process.
+
+> **Note:** If there is no empty city availble it will try to use a city occupied by a faction with more than 2 cities.
+
+**Example Usage**:  
+```txt
+name1: switcharoo_5
+```
+This will swap 1 city for 5 factions, assigning them new cities as per the logic described.
+
+---
+
+### Queue Handling and Prioritization
+
+Commands are processed from two seperate queues: a **priority queue** and a **normal queue**. Users in the `tdw_priority_users.txt` file are prioritized, meaning their commands are handled first.
+
+both queues are processed in a **stack**-style order (LIFO - Last In, First Out), meaning the most recently added commands are checked first. This means that the most recent commands take precedence over earlier added ones.
+
+1. **Successful Commands**: Logged in `tdw_twitch_points_handled.txt`.  
+   **Example Usage**:  
+   ```txt
+   Handled Entry: ID = 6, Keyword = nur_corruption_effect_all, User = name1
+   Handled Entry: ID = 5, Keyword = kho_corruption_effect_all, User = name2
+   ```
+
+2. **Unsuccessful Commands**: Retry in the next round.
+
+--- 
+
+## Example Setup for Streamer.bot
+
+(For other bots, configure them similarly.)
+
+1. Create a chat command (e.g., `!WH3name`) for viewers to submit names.
+2. Set up a command trigger when `!WH3name` is used.
+3. Configure the bot to:
+   - Write submitted names into `tdw_bot_delivered_names.txt`.
+   - Ensure the file is saved in the correct Warhammer III directory.
+   - Optionally, send a Twitch chat response confirming the rename.
+
+For a visual guide, see: [Imgur setup example](https://imgur.com)
+
+## Additional Links
+
+- Peepo o7 Emotes available on 7TV: [Click here](https://7tv.app)
+- GitHub Repository: [Click here](https://github.com)
