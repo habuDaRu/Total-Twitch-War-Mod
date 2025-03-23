@@ -1,5 +1,16 @@
 # Total Twitch War Mod – A Twitch Chat Integration Mod
 
+---
+
+Content: 
+- [Features](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#features)   
+- [Requirements](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#requirements)   
+- [Setup for Chat bot](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#setup-for-chat-bot)   
+- [Commands and Queue System](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#commands-and-queue-system)   
+- [Queue handling and prioritization](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#queue-handling-and-prioritization)   
+
+---
+
 **This mod is designed for streamers.** It requires a bot to function.   
 Without a bot providing input from Twitch chat, the mod cannot perform its actions.
 
