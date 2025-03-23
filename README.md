@@ -6,9 +6,9 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
 ---
 
 Content: 
-- [Features](https://github.com/habuDaRu/Total-Twitch-War-Mod?tab=readme-ov-file#features)   
+- [Features](#features)   
 - [Requirements](https://github.com/habuDaRu/Total-Twitch-War-Mod?tab=readme-ov-file#requirements)   
-- [Setup for Chat bot](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#setup-for-chat-bot)   
+- [Setup for Chat bot](https://github.com/habuDaRu/Total-Twitch-War-Mod?tab=readme-ov-file#setup-for-chat-bot)   
     - [Required Files]()   
     - [Opptinal Files]()   
 - [Commands and Queue System](https://github.com/habuDaRu/Total-Twitch-War-Mod/edit/main/README.md#commands-and-queue-system)   
