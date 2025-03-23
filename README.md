@@ -319,7 +319,7 @@ Commands are processed from two seperate queues: a **priority queue** and a **no
 
 both queues are processed in a **stack**-style order (LIFO - Last In, First Out), meaning the most recently added commands are checked first. This means that the most recent commands take precedence over earlier added ones.
 
-1. **Successful Commands**: Logged in `tdw_twitch_points_handled.txt`.
+1. **Successful Commands**: Logged in `tdw_twitch_points_handled.txt`.   
    **Example Output** in  `tdw_twitch_points_handled.txt`:   
    ```txt
    Handled Entry: ID = 6, Keyword = nur_corruption_effect_all, User = name1
