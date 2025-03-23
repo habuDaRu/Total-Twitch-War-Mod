@@ -21,58 +21,64 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
 
 ## Setup for Chat Bot
 
-1. **Required Files:**
-   - `tdw_bot_delivered_names.txt`: The bot must write names from Twitch chat into this file for the mod to function.
-   - `tdw_twitch_points_punishment.txt`: The bot retrieves commands in the format `username: command` (e.g., `name1: nur_corruption_effect_all`).
-   - `tdw_priority_users.txt`: A list of users who should be prioritized in the queue.
-   - `tdw_twitch_points_handled.txt`: Stores handled commands and their results.
+1. **Required Files**:
 
-   **File Rules:**
-   - Each name and command must be on a separate line in `tdw_bot_delivered_names.txt`.
-   - The mod automatically handles:
-     - Maximum name length: 25 characters (game limitation).
-     - Duplicate names are automatically filtered.
-   - Commands are retrieved from `tdw_twitch_points_punishment.txt` in the format:
+   - **`tdw_bot_delivered_names.txt`**  
+     The bot must write names from Twitch chat into this file for the mod to function.
+
+     **File Rules**:
+     - Each name must be on a separate line.
+     - The mod automatically handles the following:
+       - Maximum name length: 25 characters (game limitation).
+       - Duplicate names are automatically filtered.
+     - Place the file in:  
+       `..\Steam\steamapps\common\Total War WARHAMMER III\tdw_bot_delivered_names.txt`
+
+     **Example file content**:
+     ```
+     name1
+     name2
+     name3
+     ```
+
+     _Note_: Configuring your bot to filter duplicates or limit name length is optional. However, if you set up the bot to do this, it will help reduce the computing load for the game.
+     _Important_: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries). The mod doesn’t handle this, so it's up to the streamer to ensure the names are appropriate.
+
+   - **`tdw_twitch_points_punishment.txt`**  
+     This file retrieves commands from the chat, which can be triggered by chat commands, the Twitch channel points system, or other alerts tracked by the bot. The commands in this file are processed by the mod to trigger specific actions (see Available Commands and Their Effects).
+
+     **Example file content**:
      ```
      name1: nur_corruption_effect_all
-     name2: kho_corruption_effect_all
+     name2: spawn_armies_ksl_3
      ```
-   - The queue priority is determined by the list in `tdw_priority_users.txt`, with one name per line.
-   
-   **Place the files in the following directory:**
-   `..\Steam\steamapps\common\Total War WARHAMMER III\`
 
-   Example content of `tdw_bot_delivered_names.txt`:
-   ```txt
-   name1
-   name2
-   name3
-   ```
 
-   Example content of `tdw_twitch_points_punishment.txt`:
-   ```txt
-   name1: nur_corruption_effect_all
-   name2: kho_corruption_effect_all
-   ```
+2. **Optional Files**:
 
-   Example content of `tdw_priority_users.txt`:
-   ```txt
-   name1
-   name2
-   ```
+   - **`tdw_priority_users.txt`**  
+     If used, this file contains the names of users whose triggered commands will always be placed in the priority queue.
 
-   **Note**: Configuring your bot to filter duplicates or limit name length is optional. However, if you set up the bot to do this, it will help reduce the computing load for the game.  
-   **Important**: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries). The mod doesn’t handle this, so it's up to the streamer to ensure the names are appropriate.
+     **Example file content**:
+     ```
+     name1
+     name2
+     name3
+     ```
 
-2. **Optional File**: `tdw_twitch_spec_frames_names.txt`  
-   This file is not required but adds special faction-specific frames to certain users’ units in the panel.
+   - **`tdw_twitch_points_handled.txt`**  
+     This file tracks the actions completed by the mod. It can be used to set up confirmation messages in the Twitch chat.
 
-   - Randomly assigns frames to users listed in `tdw_twitch_spec_frames_names.txt`.
-   - Useful for VIPs, mods, subs, or any designated users.
+     **Example file content**:
+     ```
+     Handled Entry: ID = 6, Keyword = spawn_armies_ksl_3, User = name2
+     Handled Entry: ID = 5, Keyword = nur_corruption_effect_all, User = name1
+     ```
+
 
 ## Commands and Queue System
 
-The mod processes commands submitted by Twitch viewers through a chat bot, which are added to a priority or normal queue. These commands trigger various in-game events, and the mod attempts to execute them at the start of each round. If a command is successful, it is logged in the `tdw_twitch_points_handled.txt` file; otherwise, it remains in the queue for the next round.
+The mod processes commands submitted by the chat bot, adding them to either the priority or normal queue. These commands trigger various in-game effects, and the mod attempts to execute them at the start of each round.
 
 ### Available Commands and Their Effects
 
