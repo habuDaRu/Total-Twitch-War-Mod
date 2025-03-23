@@ -353,6 +353,7 @@ For a visual guide, see: [Imgur setup example](https://imgur.com)
   - **Tomb Kings Emotes**: 2
   - **Lizardmen Emotes**: 1
 
-> **Note**: To access these emotes, ensure that you have **7TV** installed and set up for your Twitch channel. The emotes can be added to your chat for any viewer to use during your streams.
+> **Note**: To access these emotes, ensure that you have **7TV** installed and set up for your Twitch channel. The emotes can be added to your chat for any viewer to use during your streams
+> For more information about **7tv** and to get started, visit [7TV](https://7tv.app).
 
 - GitHub Repository: [Click here](https://github.com)
