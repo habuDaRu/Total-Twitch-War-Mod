@@ -341,6 +341,7 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
      `tdw_twitch_points_punishment_log.txt`
 
 - also further informations can be retrieved from the following files:
+  - can be used for setting up confirmation messages back to twitch users via bot.
     - List of all active and renamed units:   
       `tdw_twitch_renamer_tdw_renamed_units.txt`
     - List of all used names:   
@@ -349,7 +350,6 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
       `tdw_twitch_renamer_tdw_non_alive_units.txt`
     - List of successful handled commands:   
       `tdw_twitch_points_handled.txt`
-  - can be used for setting up confirmation messages back to twitch users via bot.
 
 --- 
 
