@@ -332,24 +332,27 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
 
 ### Extensive Logging
 - all Logs can be found in 
-       `..\Steam\steamapps\common\Total War WARHAMMER III\tdw_twitch_points_punishment.txt`
+       `..\Steam\steamapps\common\Total War WARHAMMER III\`
+</br>
 
 - general logging of the mods processing:
   - for the automatic renaming system in:  
-     `tdw_twitch_renamer_log.txt`
+     `tdw_twitch_renamer_log.txt`   
   - for the command handling system in:  
      `tdw_twitch_points_punishment_log.txt`
-
-- also further informations can be retrieved from the following files:
+</br>
+    
+- further informations are logged:
   - can be used for setting up confirmation messages back to twitch users via bot.
+  - can be retrieved from the following files:
     - List of all active and renamed units:   
-      `tdw_twitch_renamer_tdw_renamed_units.txt`
+      `tdw_twitch_renamer_tdw_renamed_units.txt`   
     - List of all used names:   
-      `tdw_twitch_renamer_tdw_used_names.txt`
+      `tdw_twitch_renamer_tdw_used_names.txt`   
     - List of all no longer alive renamed units:   
-      `tdw_twitch_renamer_tdw_non_alive_units.txt`
+      `tdw_twitch_renamer_tdw_non_alive_units.txt`   
     - List of successful handled commands:   
-      `tdw_twitch_points_handled.txt`
+      `tdw_twitch_points_handled.txt`   
 
 --- 
 
