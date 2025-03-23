@@ -108,7 +108,7 @@ The mod processes commands submitted by the chat bot, adding them to a queue, ei
 - **`random_war_declaration`**  
   Declares a random faction war, targeting non-vassal, alive factions that are not already at war with the player, not allied with the player, and have no non-aggression pact with the player.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`:  
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: random_war_declaration
 ```
@@ -143,7 +143,7 @@ name1: random_war_declaration
 
 > **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: nur_corruption_effect_all
 ```
@@ -160,7 +160,7 @@ name1: nur_corruption_effect_all
 
 > **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: po_boni_effect_all
 ```
@@ -177,7 +177,7 @@ name1: po_boni_effect_all
 
 > **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: repl_boni_effect_all
 ```
@@ -203,7 +203,7 @@ name1: repl_boni_effect_all
 
 > **Note:** All corruption, public order, replenishment, and combat stats effects have individual cooldowns, randomized strength, and randomized duration per province.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`:  
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: damage_melee_boni_effect_province
 ```
@@ -215,7 +215,7 @@ name1: damage_melee_boni_effect_province
 - **`toss_a_coin_xx`**  
   Gives the player `xx * 1000` money (where `xx` is the amount).  
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: toss_a_coin_10
 ```
@@ -265,7 +265,7 @@ This gives the player 10,000 money.
 
 > **Note:** If the specified faction is unavailable, the mod will use rebels as a fallback.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: spawn_armies_ksl_3
 ```
@@ -281,7 +281,9 @@ This will spawn 3 armies for a Kislev faction which is hostile towards the playe
   - Resulting in a maximum of 10, 20, 50, 100 provinces revealed for the player.
   - The revealed AI Faction will act according the normal Total War Logic towards being revealed
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+> **Note:** randomly selected region can also be sea regions or player controlled regions.
+
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: peak_10
 ```
@@ -300,7 +302,7 @@ This will lift the fog of war for up to 10 regions with a chance to cancel the p
 
 > **Note:** If there is no empty city availble it will try to use a city occupied by a faction with more than 2 cities.
 
-**Example Usage in ** `tdw_twitch_points_punishment.txt`: 
+**Example Usage** in `tdw_twitch_points_punishment.txt`:
 ```txt
 name1: switcharoo_5
 ```
@@ -314,8 +316,8 @@ Commands are processed from two seperate queues: a **priority queue** and a **no
 
 both queues are processed in a **stack**-style order (LIFO - Last In, First Out), meaning the most recently added commands are checked first. This means that the most recent commands take precedence over earlier added ones.
 
-1. **Successful Commands**: Logged in `tdw_twitch_points_handled.txt`.  
-   **Example Output in ** `tdw_twitch_points_handled.txt`:  
+1. **Successful Commands**: Logged in `tdw_twitch_points_handled.txt`.
+   **Example Output** in  `tdw_twitch_points_handled.txt`:
    ```txt
    Handled Entry: ID = 6, Keyword = nur_corruption_effect_all, User = name1
    Handled Entry: ID = 5, Keyword = kho_corruption_effect_all, User = name2
