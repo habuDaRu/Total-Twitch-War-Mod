@@ -67,13 +67,15 @@ This mod is designed for streamers. It requires a bot to function. Without a bot
      name3
      ```
 
-   - **`tdw_twitch_points_handled.txt`**  
-     This file tracks the actions completed by the mod. It can be used to set up confirmation messages in the Twitch chat.
+   - **`tdw_twitch_spec_frames_names.txt`**  
+     This file is not required but adds special faction-specific frames to certain users’ units in the panel.
+      - Randomly assigns frames to users listed in tdw_twitch_spec_frames_names.txt.
+      - Useful for VIPs, mods, subs, or any designated users.
 
      **Example file content**:
      ```
-     Handled Entry: ID = 6, Keyword = spawn_armies_ksl_3, User = name2
-     Handled Entry: ID = 5, Keyword = nur_corruption_effect_all, User = name1
+     name1
+     name2
      ```
 
 
