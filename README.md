@@ -98,7 +98,8 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
 
 ## Commands and Queue System
 
-The mod processes commands submitted by the chat bot, adding them to a queue, either the priority or normal queue. The commands trigger various in-game effects, and the mod attempts to execute them at the start of each round.
+The mod processes commands submitted by the chat bot, adding them to a queue, either the priority or normal queue.   
+The commands trigger various in-game effects, and the mod attempts to execute them at the start of each round.   
 
 ### Available Commands and Their Effects
 
@@ -227,7 +228,8 @@ This gives the player 10,000 money.
 #### **Enemy Armies**
 
 - **`spawn_armies_xxx_yy`**  
-  Spawns `yy` enemy armies for a faction `xxx`, which is hostile towards the player. These armies will have randomized faction-specific units and randomized army sizes.  
+  Spawns `yy` enemy armies for a faction `xxx`, which is hostile towards the player.   
+  These armies will have randomized faction-specific units and randomized army sizes.  
   - `yy` defines the number of armies spawned.  
   - `xxx` can include specific factions or group options:
     - **Specific Factions:**
@@ -278,7 +280,7 @@ This will spawn 3 armies for a Kislev faction which is hostile towards the playe
 
 - **`peak_10`, `peak_5`, `peak_2`, `peak_1`**  
   Lifts the fog of war by revealing a random number of regions.  
-  - The number represents the early cancel chance (cumulative) for each region. These chances build up over time to 100% (sure cancel).
+  - The number represents the cancel chance (cumulative) for each region. These chances build up over each step by the cancel chance to 100%.
   - Resulting in a maximum of 10, 20, 50, 100 provinces revealed for the player.
   - The revealed AI Faction will act according the normal Total War Logic towards being revealed
 
