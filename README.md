@@ -321,6 +321,18 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
 For a visual guide, see: [Imgur setup example](https://imgur.com)
 
 ## Additional Links
+### o7 Peepo Emotes
 
-- Peepo o7 Emotes available on 7TV: [Click here](https://7tv.app)
+- Peepo o7 Emotes available on 7TV: [Click here]([https://7tv.app](https://7tv.app/emote-sets/01JN18FXZ9JG1BEGPY9KVG9BRJ))
+  - **Default Emotes**: 3
+  - **Empire Emotes**: 4
+  - **Kislev Emotes**: 3
+  - **Cathay Emotes**: 2
+  - **Greenskins Emotes**: 3
+  - **Dark Elf Emotes**: 2
+  - **Tomb Kings Emotes**: 2
+  - **Lizardmen Emotes**: 1
+
+> **Note**: To access these emotes, ensure that you have **7TV** installed and set up for your Twitch channel. The emotes can be added to your chat for any viewer to use during your streams.
+
 - GitHub Repository: [Click here](https://github.com)
