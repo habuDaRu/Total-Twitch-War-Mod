@@ -5,7 +5,7 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
 
 ---
 
-Content: 
+### Content: 
 - [Features](#features)   
 - [Requirements](#requirements)   
 - [Setup for Chat bot](#setup-for-chat-bot)   
