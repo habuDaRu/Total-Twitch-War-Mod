@@ -176,6 +176,8 @@ name1: random_war_declaration
 **Example Usage** in `tdw_twitch_points_punishment.txt`:   
 ```txt
 name1: nur_corruption_effect_all
+name2: random_corruption_effect_all
+name4: skv_corruption_effect_all
 ```
 
 ---
@@ -193,6 +195,7 @@ name1: nur_corruption_effect_all
 **Example Usage** in `tdw_twitch_points_punishment.txt`:   
 ```txt
 name1: po_boni_effect_all
+name2: po_mali_effect_all
 ```
 
 ---
@@ -210,6 +213,7 @@ name1: po_boni_effect_all
 **Example Usage** in `tdw_twitch_points_punishment.txt`:   
 ```txt
 name1: repl_boni_effect_all
+name2: repl_mali_effect_all
 ```
 
 ---
@@ -317,6 +321,7 @@ This will spawn 3 armies for a Kislev faction which is hostile towards the playe
 **Example Usage** in `tdw_twitch_points_punishment.txt`:   
 ```txt
 name1: peak_10
+name2: peak_2
 ```
 This will lift the fog of war for up to 10 regions with a chance to cancel the process earlier with 10% per allready revealed region.
 
