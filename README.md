@@ -418,5 +418,7 @@ For a visual guide, see: [Imgur setup example](https://imgur.com/a/VQZyLqZ)
 > **Note**: To access these emotes, ensure that you have **7TV** installed and set up for your Twitch channel. The emotes can be added to your chat for any viewer to use during your streams.   
 > For more information about **7tv** and to get started, visit [7TV](https://7tv.app).
 
+</br></br>
+   
 - Steam Workshop: [Click here](https://steamcommunity.com/sharedfiles/filedetails/?id=3450887654)
 - GitHub Repository: [Click here](https://github.com)
