@@ -72,7 +72,7 @@ Content:
 
      > _Note_: Configuring your bot to filter duplicates or limit name length is optional. However, if you set up the bot to do this, it will help reduce the computing load for the game.
      
-     > _Important_: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries). The mod doesn’t handle this, so it's up to the streamer to ensure the names are appropriate.
+     > _Important_: The bot should also be used for additional filtering, such as blocking inappropriate names or any other aspects the streamer wants to prevent (e.g., offensive words or unwanted entries).
 
    - **`tdw_twitch_points_punishment.txt`**  
      The bot must write names and commands retrieved from Twitch chat into this file for the command handling system of the mod to function.   
