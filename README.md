@@ -384,7 +384,7 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
 - further informations are logged:
   - can be used for setting up confirmation messages back to twitch users via bot.
   - can be retrieved from the following files:
-    - List of all active and renamed units:   
+    - List of all active and renamed units with their stats:   
       `tdw_twitch_renamer_tdw_renamed_units.txt`   
     - List of all used names:   
       `tdw_twitch_renamer_tdw_used_names.txt`   
