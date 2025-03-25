@@ -304,7 +304,13 @@ This gives the player 10,000 money.
 ```txt
 name1: spawn_armies_ksl_3
 ```
-This will spawn 3 armies for a Kislev faction which is hostile towards the player.
+This will spawn 3 armies for a Kislev faction which is hostile towards the player.   
+
+**Example Usage** in `tdw_twitch_points_punishment.txt`:   
+```txt
+name2: spawn_armies_dem_6
+```
+This will spawn 6 armies from the demon factions (Nurgle, Khorne, Slaanesh or Tzeentch) which are hostile towards the player.
 
 ---
 
