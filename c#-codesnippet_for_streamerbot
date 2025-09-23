@@ -1,0 +1,102 @@
+using System;
+
+public class CPHInline
+{
+    public bool Execute()
+    {
+        // Get the global variable (true = global)
+        string raw = CPH.GetGlobalVar<string>("WHcommand", true);
+
+        if (string.IsNullOrEmpty(raw))
+        {
+            CPH.LogInfo("⚠️ WHcommand is empty or not set.");
+            return true;
+        }
+
+        // Remove the "!WH" prefix and trim spaces
+        string cleaned = raw.StartsWith("!WH") ? raw.Substring(3).Trim() : raw.Trim();
+
+        // Define exact commands (from Lua handlers)
+        string[] exactCommands = {
+            "random_war_declaration",
+            "random_corruption_effect_all",
+            "nur_corruption_effect_all",
+            "kho_corruption_effect_all",
+            "sla_corruption_effect_all",
+            "tze_corruption_effect_all",
+            "skv_corruption_effect_all",
+            "chs_corruption_effect_all",
+            "vmp_corruption_effect_all",
+            "neu_corruption_effect_all",
+            "po_boni_effect_all",
+            "po_mali_effect_all",
+            "repl_boni_effect_all",
+            "repl_mali_effect_all",
+            "damage_melee_boni_effect_province",
+            "damage_ranged_boni_effect_province",
+            "armor_boni_effect_province",
+            "melee_defence_boni_effect_province",
+            "movement_range_boni_effect_province",
+            "peak_10",
+            "peak_5",
+            "peak_2",
+            "peak_1",
+            "global_shuffle",
+            "global_shuffle_ai"
+        };
+
+        bool isValid = false;
+
+        // 1. Check exact commands
+        foreach (var cmd in exactCommands)
+        {
+            if (string.Equals(cleaned, cmd, StringComparison.OrdinalIgnoreCase))
+            {
+                isValid = true;
+                break;
+            }
+        }
+
+        // 2. Check toss_a_coin pattern: toss_a_coin_XX
+        if (!isValid && cleaned.StartsWith("toss_a_coin_"))
+        {
+            string numberPart = cleaned.Substring("toss_a_coin_".Length);
+            if (int.TryParse(numberPart, out int _))
+                isValid = true;
+        }
+
+        // 3. Check switcharoo pattern: switcharoo_XX or switcharoo_XX_ai
+        if (!isValid && cleaned.StartsWith("switcharoo_"))
+        {
+            string numberPart = cleaned.Substring("switcharoo_".Length);
+            if (numberPart.EndsWith("_ai"))
+                numberPart = numberPart.Substring(0, numberPart.Length - 3);
+
+            if (int.TryParse(numberPart, out int _))
+                isValid = true;
+        }
+
+        // 4. Check spawn_armies pattern: spawn_armies_TYPE_COUNT
+        if (!isValid && cleaned.StartsWith("spawn_armies_"))
+        {
+            string[] parts = cleaned.Split('_');
+            // Expected format: spawn_armies_TYPE_COUNT -> 4 parts
+            if (parts.Length == 4 && int.TryParse(parts[3], out int _))
+                isValid = true;
+        }
+
+        if (!isValid)
+        {
+            CPH.LogInfo($"❌ Command '{cleaned}' is not allowed, resetting WHcommand.");
+            // Reset the global variable
+            CPH.SetGlobalVar("WHcommand", "NOT", true);
+            return true;
+        }
+
+        // Save back the cleaned value if valid
+        CPH.SetGlobalVar("WHcommand", cleaned, true);
+
+        CPH.LogInfo($"✅ Valid command = {cleaned}");
+        return true;
+    }
+}
