@@ -356,7 +356,7 @@ This will swap 1 city for 5 factions, assigning them new cities as per the logic
 #### **Shuffle All Cities Around**
 
 - **`global_shuffle`**  
-  Switches cities for all alive factions but respect the amount of regions they controll.
+  Switches cities for all alive factions but respect the amount of regions they control.
 
 - **`global_shuffle_ai`**  
   Similar to `global_shuffle`, but only AI factions are affected. The player is excluded from this process.
