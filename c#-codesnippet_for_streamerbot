@@ -9,7 +9,7 @@ public class CPHInline
 
         if (string.IsNullOrEmpty(raw))
         {
-            CPH.LogInfo("⚠️ WHcommand is empty or not set.");
+            CPH.LogInfo("WHcommand is empty or not set.");
             return true;
         }
 
@@ -87,7 +87,7 @@ public class CPHInline
 
         if (!isValid)
         {
-            CPH.LogInfo($"❌ Command '{cleaned}' is not allowed, resetting WHcommand.");
+            CPH.LogInfo($"Command '{cleaned}' is not allowed, resetting WHcommand.");
             // Reset the global variable
             CPH.SetGlobalVar("WHcommand", "NOT", true);
             return true;
@@ -96,7 +96,7 @@ public class CPHInline
         // Save back the cleaned value if valid
         CPH.SetGlobalVar("WHcommand", cleaned, true);
 
-        CPH.LogInfo($"✅ Valid command = {cleaned}");
+        CPH.LogInfo($"Valid command = {cleaned}");
         return true;
     }
 }
