@@ -21,6 +21,7 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
     - [Army Spawner](#army-spawner)   
     - [peak through Fog of war](#peak-through-fog-of-war)   
     - [Switch cities around](#switch-cities-around)
+    - [Shuffle All Cities Around](#shuffle-all-cities-around)
   - [Queue handling and prioritization](#queue-handling-and-prioritization)   
 - [Detailed Logging](#detailed-logging)   
 - [Example Setup for streamer.bot](#example-setup-for-streamerbot)   
@@ -352,6 +353,21 @@ This will swap 1 city for 5 factions, assigning them new cities as per the logic
 
 ---
 
+#### **Shuffle All Cities Around**
+
+- **`global_shuffle`**  
+  Switches cities for all alive factions but respect the amount of regions they controll.
+
+- **`global_shuffle_ai`**  
+  Similar to `global_shuffle`, but only AI factions are affected. The player is excluded from this process.
+
+**Example Usage** in `tdw_twitch_points_punishment.txt`:   
+```txt
+name1: global_shuffle
+```
+This will randomly redistribute all faction controlled regions.
+
+---
 ### Queue Handling and Prioritization
 
 Commands are processed from two seperate queues: a **priority queue** and a **normal queue**. Users in the `tdw_priority_users.txt` file are prioritized, meaning their commands are handled first.
