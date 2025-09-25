@@ -361,6 +361,8 @@ This will swap 1 city for 5 factions, assigning them new cities as per the logic
 - **`global_shuffle_ai`**  
   Similar to `global_shuffle`, but only AI factions are affected. The player is excluded from this process.
 
+> **Note:** If done early it can slow down the early rounds since the faction count stays higher than usual. After roughly 20 to 30 rounds alot of the minor factions usally get eliminated and the turn time gets normal.
+
 **Example Usage** in `tdw_twitch_points_punishment.txt`:   
 ```txt
 name1: global_shuffle
