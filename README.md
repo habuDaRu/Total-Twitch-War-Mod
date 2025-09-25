@@ -22,6 +22,8 @@ Without a bot providing input from Twitch chat, the mod cannot perform its actio
     - [peak through Fog of war](#peak-through-fog-of-war)   
     - [Switch cities around](#switch-cities-around)
     - [Shuffle All Cities Around](#shuffle-all-cities-around)
+    - [This is Total War](#this-is-total-war)
+    - [Culture War](#culture-war)
   - [Queue handling and prioritization](#queue-handling-and-prioritization)   
 - [Detailed Logging](#detailed-logging)   
 - [Example Setup for streamer.bot](#example-setup-for-streamerbot)   
@@ -368,6 +370,77 @@ This will swap 1 city for 5 factions, assigning them new cities as per the logic
 name1: global_shuffle
 ```
 This will randomly redistribute all faction controlled regions.
+
+---
+
+#### **This is Total War**
+
+- **`this_is_total_war`**  
+  Every Major Faction declares War on every other faction.
+
+- **`this_is_total_war_ai`**  
+  Similar to `this_is_total_war`, but only AI factions are affected. The player is excluded from this process.
+
+- **`this_is_total_war_no_betray`**  
+  Every Major Faction declares War on every other faction but Alliances/Vassalage and Non Agression Pacts will be respected and not broken.
+
+- **`this_is_total_war_ai_no_betray`**  
+  Similar to `this_is_total_war_no_betray`, but only AI factions are affected. The player is excluded from this process.
+
+> **Note:** After executing the game will look like it is frozen but its not (you can check that it is still processing in the logs) since the amount of war declarations can be high especially at game start if there are still alot of Major factions alive. It only targets major factions to reduce the amount of war declarations from roughly 45k (for all factions) to around 5k (for majors only). It will still take some time, so get a coffee and let it do it thing.
+
+- **`i_am_total_war`**  
+  Special command for player only to declare war against all (major and minor) alive factions.
+
+- **`i_am_total_war_no_betray`**  
+  Similar to `i_am_total_war`, but Alliances/Vassalage and Non Agression Pacts will be respected and not broken.
+
+
+**Example Usage** in `tdw_twitch_points_punishment.txt`:   
+```txt
+name1: this_is_total_war
+name2: this_is_total_war_ai
+name3: this_is_total_war_no_betray
+name4: this_is_total_war_ai_no_betray
+name5: i_am_total_war
+name6: i_am_total_war_no_betray
+```
+This will make every Major Faction declare war against every other Major Faction else.
+
+---
+
+#### **Culture War**
+
+- **`culture_war`**  
+  Every Major faction will declares War on every faction from a different culture.
+
+- **`culture_war_ai`**  
+  Similar to `culture_war`, but only AI factions are affected. The player is excluded from this process.
+
+- **`culture_war_no_betray`**  
+  Every Major faction declares War on every faction from a different culture but Alliances/Vassalage and Non Agression Pacts will be respected and not broken.
+
+- **`culture_war_ai_no_betray`**  
+  Similar to `culture_war_no_betray`, but only AI factions are affected. The player is excluded from this process.
+
+> **Note:** Again this can take some time to process (like This is total war). For clarification: cultures are the races ingame (f.e.: Dwarfs,Empire,Kislev,Woodelfs,High Elfs,...).
+
+- **`no_man_of_culture`**  
+  Special command for player only to declare war against all (major and minor) alive factions from different culture.
+
+- **`no_man_of_culture_no_betray`**  
+  Similar to `no_man_of_culture`, but Alliances/Vassalage and Non Agression Pacts will be respected and not broken.
+
+**Example Usage** in `tdw_twitch_points_punishment.txt`:   
+```txt
+name1: culture_war
+name2: culture_war_ai
+name3: culture_war_no_betray
+name4: culture_war_ai_no_betray
+name5: no_man_of_culture
+name6: no_man_of_culture_no_betray
+```
+This will make every Major Faction declare war against every other Major faction from a different culture.
 
 ---
 ### Queue Handling and Prioritization
