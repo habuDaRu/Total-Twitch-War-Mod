@@ -490,14 +490,23 @@ both queues are processed in a **stack**-style order (LIFO - Last In, First Out)
 
 (For other bots, configure them similarly.)
 
-1. Create a chat command (e.g., `!WH3name`) for viewers to submit names.
-2. Set up a command trigger when `!WH3name` is used.
-3. Configure the bot to:
-   - Write submitted names into `tdw_bot_delivered_names.txt`.
-   - Ensure the file is saved in the correct Warhammer III directory.
-   - Optionally, send a Twitch chat response confirming the rename.
+for how to setup Streamer.bot to handle the naming and the commands for you (check the comments for whats needed in Streamer.bot and for available settings
 
-For a visual guide, see: [Imgur setup example](https://imgur.com/a/VQZyLqZ)
+**For Commands:**
+```txt
+// 1st Sub-Action: set global "WHcommand" to %rawInput%
+// 2nd Sub-Action: set global "user" to %user%
+
+// THAN Add 2 Execute Code Block in Sub-Actions with code from the File: c#-codesnippet_for_streamerbot_commands
+```
+
+**For Names:**
+```txt
+// 1st Sub-Action: set global "WHcommand" to %rawInput%
+// 2nd Sub-Action: set global "user" to %user%
+
+// Than Add A Execute Code Block in Sub-Actions with code from the File: c#-codesnippet_for_streamerbot_naming
+```
 
 ## Additional Links
 ### o7 Peepo Emotes
