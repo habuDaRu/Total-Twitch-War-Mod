@@ -181,6 +181,8 @@ public class CPHInline
     private static readonly string FailureMessageTemplate = "@{0} - BenderHeh No valid Command";
 
     // ===== Settings =====
+    // Adjust filepath to the ...\Total War WARHAMMER III\tdw_twitch_points_punishment.txt
+    string filePath = @"D:\Games\Steam\steamapps\common\Total War WARHAMMER III\tdw_twitch_points_punishment.txt";
     // Enable or disable failure messages
     private static readonly bool EnableFailureMessages = true;
 
@@ -197,8 +199,6 @@ public class CPHInline
             return true;
         }
 
-        // Adjust filepath to the ...\Total War WARHAMMER III\tdw_twitch_points_punishment.txt
-        string filePath = @"D:\Games\Steam\steamapps\common\Total War WARHAMMER III\tdw_twitch_points_punishment.txt";
         string directory = Path.GetDirectoryName(filePath);
 
         try
