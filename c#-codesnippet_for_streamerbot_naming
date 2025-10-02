@@ -1,0 +1,70 @@
+// 1st Sub-Action: set global "WHcommand" to %rawInput%
+// 2nd Sub-Action: set global "user" to %user%
+
+// Than Add this:
+// Code for decoding keywords for writing to file
+// Add this as own Execute Code Block in Sub-Actions
+
+using System;
+using System.IO;
+
+public class CPHInline
+{
+    // ===== Settings =====
+        // Adjust filepath to the ...\Total War WARHAMMER III\tdw_bot_delivered_names.txt
+    private static readonly string FilePath = @"D:\Games\Steam\steamapps\common\Total War WARHAMMER III\tdw_bot_delivered_names.txt";
+    private static bool persistentVar = false;
+    private static readonly bool EnableFailureMessages = true;
+    // Set Behaviour (username vs text after keyword)
+    private static readonly bool UseTextAfterCommand = true;
+
+    // ===== Messages =====
+    //Default Behaviour (uses Username)
+    private static readonly string SuccessMessageDefault = "@{0} - added to name list!";
+    private static readonly string FailureMessage = "@{0} - BenderHeh could not add your name.";
+    // Alternative Behaviour (uses Text after keyword)
+    private static readonly string SuccessMessageWithValue = "@{0} - added {1} to name list!";
+
+    public bool Execute()
+    {
+        // Get user for chat messages
+        string user = CPH.GetGlobalVar<string>("user", persistentVar);
+
+        // Determine what to write to file
+        string entry = UseTextAfterCommand
+            ? CPH.GetGlobalVar<string>("WHcommand", persistentVar)?.Trim()
+            : user;
+
+        // Skip if empty
+        if (string.IsNullOrWhiteSpace(entry) || string.IsNullOrWhiteSpace(user))
+        {
+            if (EnableFailureMessages)
+                CPH.SendMessage(string.Format(FailureMessage, user ?? "unknown user"));
+            return true;
+        }
+
+        string directory = Path.GetDirectoryName(FilePath);
+
+        try
+        {
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            // Append entry to the file
+            File.AppendAllText(FilePath, entry + Environment.NewLine);
+
+            // Send success message
+            if (UseTextAfterCommand)
+                CPH.SendMessage(string.Format(SuccessMessageWithValue, user, entry));
+            else
+                CPH.SendMessage(string.Format(SuccessMessageDefault, user));
+        }
+        catch (Exception)
+        {
+            if (EnableFailureMessages)
+                CPH.SendMessage(string.Format(FailureMessage, user));
+        }
+
+        return true;
+    }
+}
