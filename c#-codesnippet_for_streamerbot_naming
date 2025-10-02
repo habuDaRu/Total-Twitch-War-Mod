@@ -15,7 +15,7 @@ public class CPHInline
     private static readonly string FilePath = @"D:\Games\Steam\steamapps\common\Total War WARHAMMER III\tdw_bot_delivered_names.txt";
     private static bool persistentVar = false;
     private static readonly bool EnableFailureMessages = true;
-    // Set Behaviour (username vs text after keyword)
+    // Set Behaviour (username (false) vs text after keyword (true) )
     private static readonly bool UseTextAfterCommand = true;
 
     // ===== Messages =====
