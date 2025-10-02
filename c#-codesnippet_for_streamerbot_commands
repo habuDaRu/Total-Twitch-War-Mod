@@ -10,6 +10,9 @@ using System.Collections.Generic;
 
 public class CPHInline
 {
+    // uses Persistent Variables ?
+    bool persistentVar = false;
+
     // ===== PREFIX (adjustable) =====
     // adjust prefix for command here (keep it the same as in streamer.bot)
     private static readonly string Prefix = "!WH "; 
@@ -80,11 +83,11 @@ public class CPHInline
 
     public bool Execute()
     {
-        string raw = CPH.GetGlobalVar<string>("WHcommand", true);
+        string raw = CPH.GetGlobalVar<string>("WHcommand", persistentVar);
 
         if (string.IsNullOrWhiteSpace(raw))
         {
-            CPH.SetGlobalVar("WHcommand", "NOT", true);
+            CPH.SetGlobalVar("WHcommand", "NOT", persistentVar);
             CPH.LogInfo("⚠️ WHcommand is empty or not set. Reset to 'NOT'.");
             return true;
         }
@@ -97,7 +100,7 @@ public class CPHInline
         // ===== STATIC COMMAND CHECK =====
         if (CommandMap.TryGetValue(clean.ToLower(), out string mappedStatic))
         {
-            CPH.SetGlobalVar("WHcommand", mappedStatic, true); // save without prefix
+            CPH.SetGlobalVar("WHcommand", mappedStatic, persistentVar); // save without prefix
             CPH.LogInfo($"✅ Static chat command '{raw}' mapped to '{mappedStatic}'");
             return true;
         }
@@ -106,13 +109,13 @@ public class CPHInline
         string dynamicCommand = HandleDynamicCommand(clean);
         if (!string.IsNullOrEmpty(dynamicCommand))
         {
-            CPH.SetGlobalVar("WHcommand", dynamicCommand, true); // save without prefix
+            CPH.SetGlobalVar("WHcommand", dynamicCommand, persistentVar); // save without prefix
             CPH.LogInfo($"✅ Dynamic chat command '{raw}' mapped to '{dynamicCommand}'");
             return true;
         }
 
         // ===== INVALID COMMAND =====
-        CPH.SetGlobalVar("WHcommand", "NOT", true);
+        CPH.SetGlobalVar("WHcommand", "NOT", persistentVar);
         CPH.LogInfo($"❌ Invalid chat command '{raw}', WHcommand set to 'NOT'");
         return true;
     }
@@ -158,6 +161,7 @@ public class CPHInline
     }
 }
 
+
 // Code for writing in Files
 // Add this as own Execute Code Block in Sub-Actions (behind the above one)
 
@@ -166,6 +170,9 @@ using System.IO;
 
 public class CPHInline
 {
+    // uses Persistent Variables ?
+    bool persistentVar = false;
+
     // ===== Messages =====
     // Adjust as you want it
     // Success message
@@ -179,8 +186,8 @@ public class CPHInline
 
     public bool Execute()
     {
-        string user = CPH.GetGlobalVar<string>("user", true);
-        string command = CPH.GetGlobalVar<string>("WHcommand", true);
+        string user = CPH.GetGlobalVar<string>("user", persistentVar);
+        string command = CPH.GetGlobalVar<string>("WHcommand", persistentVar);
 
         // Skip if empty or invalid command
         if (string.IsNullOrWhiteSpace(user) || string.IsNullOrWhiteSpace(command) || command.Equals("NOT", StringComparison.OrdinalIgnoreCase))
@@ -214,4 +221,3 @@ public class CPHInline
         return true;
     }
 }
-
