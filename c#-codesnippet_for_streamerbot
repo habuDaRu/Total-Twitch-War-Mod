@@ -1,3 +1,10 @@
+// 1st Sub-Action: set global "WHcommand" to %rawInput%
+// 2nd Sub-Action: set global "user" to %user%
+
+// Than Add this:
+// Code for decoding keywords for writing to file
+// Add this as own Execute Code Block in Sub-Actions
+
 using System;
 using System.Collections.Generic;
 
@@ -150,3 +157,61 @@ public class CPHInline
         return null;
     }
 }
+
+// Code for writing in Files
+// Add this as own Execute Code Block in Sub-Actions (behind the above one)
+
+using System;
+using System.IO;
+
+public class CPHInline
+{
+    // ===== Messages =====
+    // Adjust as you want it
+    // Success message
+    private static readonly string SuccessMessageTemplate = "@{0} - SPbot {1} added to queue peepoClap";
+    // Failure message (most likely typo)
+    private static readonly string FailureMessageTemplate = "@{0} - BenderHeh No valid Command";
+
+    // ===== Settings =====
+    // Enable or disable failure messages
+    private static readonly bool EnableFailureMessages = true;
+
+    public bool Execute()
+    {
+        string user = CPH.GetGlobalVar<string>("user", true);
+        string command = CPH.GetGlobalVar<string>("WHcommand", true);
+
+        // Skip if empty or invalid command
+        if (string.IsNullOrWhiteSpace(user) || string.IsNullOrWhiteSpace(command) || command.Equals("NOT", StringComparison.OrdinalIgnoreCase))
+        {
+            if (EnableFailureMessages && !string.IsNullOrWhiteSpace(user))
+                CPH.SendMessage(string.Format(FailureMessageTemplate, user));
+            return true;
+        }
+
+        // Adjust filepath to the ...\Total War WARHAMMER III\tdw_twitch_points_punishment.txt
+        string filePath = @"D:\Games\Steam\steamapps\common\Total War WARHAMMER III\tdw_twitch_points_punishment.txt";
+        string directory = Path.GetDirectoryName(filePath);
+
+        try
+        {
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            string line = $"{user}: {command}";
+            File.AppendAllText(filePath, line + Environment.NewLine);
+
+            // Send success message
+            CPH.SendMessage(string.Format(SuccessMessageTemplate, user, command));
+        }
+        catch (Exception)
+        {
+            if (EnableFailureMessages && !string.IsNullOrWhiteSpace(user))
+                CPH.SendMessage(string.Format(FailureMessageTemplate, user));
+        }
+
+        return true;
+    }
+}
+
