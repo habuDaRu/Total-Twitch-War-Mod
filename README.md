@@ -317,9 +317,9 @@ This will spawn 6 armies from the demon factions (Nurgle, Khorne, Slaanesh or Tz
 
 ---
 
-#### **Peak Through Fog of War**
+#### **Peek Through Fog of War**
 
-- **`peak_10`, `peak_5`, `peak_2`, `peak_1`**  
+- **`peek_10`, `peek_5`, `peek_2`, `peek_1`**  
   Lifts the fog of war by revealing a random number of regions.  
   - The number represents the cancel chance (cumulative) for each region. These chances build up over each step by the cancel chance to 100%.
   - Resulting in a maximum of 10, 20, 50, 100 provinces revealed for the player.
@@ -329,8 +329,8 @@ This will spawn 6 armies from the demon factions (Nurgle, Khorne, Slaanesh or Tz
 
 **Example Usage** in `tdw_twitch_points_punishment.txt`:   
 ```txt
-name1: peak_10
-name2: peak_2
+name1: peek_10
+name2: peek_2
 ```
 This will lift the fog of war for up to 10 regions with a chance to cancel the process earlier with 10% per allready revealed region.
 
